@@ -1,8 +1,8 @@
 var pmServices = angular.module('pmServices', ['ngResource']);
 
 pmServices.factory('Client', function($resource) {
-    return $resource('http://localhost\\:5984/clients/:clientId', {}, {
-        'query': {method:'GET', params:{clientId:'_all_docs'}, isArray:true},
+    return $resource('/rest/clients/:clientId', {}, {
+        'query': {method:'GET', params:{clientId:'clients'}, isArray:true},
         'save': {method:'POST', params:{clientId:''}},
         'update': {method:'UPDATE'}
     });
@@ -20,7 +20,7 @@ pmServices.factory('Ticket', function($resource) {
     });
 });
 
-pmLocalServices = angular.module('pmLocalServices', ['gwIndexedDb']);
+/*pmLocalServices = angular.module('pmLocalServices', ['gwIndexedDb']);
 
 pmLocalServices.factory('LocalClient', function($indexedDb) {
     return $indexedDb('my_db', 1, {
@@ -31,4 +31,4 @@ pmLocalServices.factory('LocalClient', function($indexedDb) {
             }
         }
     });
-});
+});*/

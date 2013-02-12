@@ -13,9 +13,8 @@ function DashboardCtrl($scope) {
 function SettingsCtrl($scope) {
 }
 
-function ClientListCtrl($scope, Client, LocalClient) {
+function ClientListCtrl($scope, Client) {
     $scope.clients = Client.query();
-    //LocalClient.getAll('clients');
 }
 
 function ClientAddEditCtrl($scope, $routeParams, Client) {
