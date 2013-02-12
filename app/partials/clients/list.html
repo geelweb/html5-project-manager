@@ -1,0 +1,61 @@
+<h1>Clients</h1>
+<p class="muted">Choose client or <a href="#/client/0">add new client</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Client</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="client in clients" init-client-item="client">
+            <td>{{ client.id }}</td>
+            <td>
+                <a href="#remove_client"><i class="icon-remove pull-right"></i></a>
+                <a href="#/client/{{ client.id }}"><i class="icon-edit pull-right"></i></a>
+                {{ client.name }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!--h1 init-client-list="">Clients</h1>
+<p class="muted">Choose client or <a href="#add_client">add new client</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Client</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="client in clients" init-client-item="client">
+            <td>{{ client.id }}</td>
+            <td>
+                <a href="#remove_client"><i class="icon-remove pull-right"></i></a>
+                <a href="#edit_client"><i class="icon-edit pull-right"></i></a>
+                {{ client.name }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="add_client" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Add a client</h3>
+    </div>
+    <form class="modal-form" ng-controller="ClientDetailCtrl" ng-submit="submit()">
+        <input type="hidden" name="id" id="id" value="0" ng-model="id">
+        <div class="modal-body">
+            <fieldset>
+                <label>Name</label>
+                <input type="text" name="name" id="name" value="" required="required" placeholder="Client name" ng-model="name">
+            </fieldset>
+        </div>
+         <div class="modal-footer">
+             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+             <button class="btn btn-primary" type="submit">Save changes</button>
+         </div>
+    </form>
+</div-->

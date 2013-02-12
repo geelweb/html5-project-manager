@@ -1,0 +1,56 @@
+<h1 init-ticket-list="">Tickets</h1>
+<p class="muted">Choose ticket or <a href="#add_ticket">add new ticket</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Priority</th>
+            <th>Ticket</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="ticket in tickets" init-ticket-item="ticket">
+            <td>{{ ticket.id }}</td>
+            <td><span class="label label-{{ ticket.priority }}">{{ ticket.priority }}</span></td>
+            <td>
+                <a href="#remove_ticket"><i class="icon-remove pull-right"></i></a>
+                <a href="#edit_ticket"><i class="icon-edit pull-right"></i></a>
+                <a href="#" rel="tooltip"><i class="icon-warning-sign" ng-show="ticket.warning"></i></a>
+                {{ ticket.title }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="add_ticket" class="modal hide fade" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Add a ticket</h3>
+    </div>
+    <form class="modal-form">
+        <input type="hidden" name="id" id="id" value="">
+        <div class="modal-body">
+            <fieldset>
+                <label>Title</label>
+                <input type="text" name="title" id="title" required="required" placeholder="Ticket subject">
+                <label>Project</label>
+                <select name="project" id="project" required="required">
+                    <option value="1">Project A</option>
+                    <option value="2">Project B</option>
+                    <option value="3">Project C</option>
+                </select>
+                <label>Priority</label>
+                <select name="priority" id="priority" required="required">
+                    <option value="low">low</option>
+                    <option value="normal">normal</option>
+                    <option value="high">high</option>
+                </select>
+            </fieldset>
+        </div>
+         <div class="modal-footer">
+             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+             <button class="btn btn-primary" type="submit">Save changes</button>
+         </div>
+    </form>
+</div>

@@ -1,0 +1,10 @@
+<h1>Add/Edit a client</h1>
+
+<form ng-controller="ClientAddEditCtrl" ng-submit="submit()">
+    <fieldset>
+        <label>Name</label>
+        <input type="text" name="name" id="name" value="{{ name }}" required="required" placeholder="Client name" ng-model="name">
+    </fieldset>
+     <button class="btn">Cancel</button>
+     <button class="btn btn-primary" type="submit">Save changes</button>
+</form>
