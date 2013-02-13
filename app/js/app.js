@@ -1,4 +1,4 @@
-angular.module('pm', ['pmProjects', 'pmTickets', 'pmServices', 'pmLocalServices'])
+angular.module('pm', ['pmProjects', 'pmTickets', 'pmServices'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/home', {templateUrl:'partials/home.html', controller: HomeCtrl})
