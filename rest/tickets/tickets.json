@@ -1,5 +1,5 @@
 [
-    {"id": 1, "title": "Ticket A", "id_project": 1, "priority": "normal"},
-    {"id": 2, "title": "Ticket B", "id_project": 1, "priority": "low", "warning": "J. John is working on it since 1h 12mn"},
-    {"id": 3, "title": "Ticket C", "id_project": 1, "priority": "high"}
+    {"_id": 1, "subject": "Ticket A", "_project": {"_id": 1, "name": "Project A"}, "priority": "normal"},
+    {"_id": 2, "subject": "Ticket B", "_project": {"_id": 1, "name": "Project A"}, "priority": "low", "warning": "J. John is working on it since 1h 12mn"},
+    {"_id": 3, "subject": "Ticket C", "_project": {"_id": 1, "name": "Project A"}, "priority": "high"}
 ]

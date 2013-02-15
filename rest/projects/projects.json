@@ -1,5 +1,5 @@
 [
-    {"id": 1, "name": "Project A", "id_client": 1},
-    {"id": 2, "name": "Project B", "id_client": 2},
-    {"id": 3, "name": "Project C", "id_client": 1}
+    {"_id": 1, "name": "Project A", "_client": {"_id":1, "name": "Client A"}},
+    {"_id": 2, "name": "Project B", "_client": {"_id":1, "name": "Client A"}},
+    {"_id": 3, "name": "Project C", "_client": {"_id":2, "name": "Client B"}}
 ]
