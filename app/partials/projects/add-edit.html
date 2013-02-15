@@ -1,0 +1,15 @@
+<h1>Add/Edit a project</h1>
+
+<form ng-controller="ProjectAddEditCtrl" ng-submit="submit()">
+    <fieldset>
+        <label>Name</label>
+        <input type="text" name="name" id="name" value="{{ name }}" required="required" placeholder="Project name" ng-model="project.name">
+
+        <label>Client</label>
+        <select name="client" id="client" required="required" ng-model="project._client" ng-options="value.name for (key, value) in clients">
+            <option value="">Select a client</option>
+        </select>
+    </fieldset>
+    <button class="btn">Cancel</button>
+    <button class="btn btn-primary" type="submit">Save changes</button>
+</form>

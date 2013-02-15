@@ -1,0 +1,26 @@
+<h1>Add/Edit a ticket</h1>
+
+<form ng-controller="TicketAddEditCtrl" ng-submit="submit()">
+    <fieldset>
+        <label>Subject</label>
+        <input type="text" name="subject" id="subject" required="required" placeholder="Ticket subject" ng-model="ticket.subject">
+
+        <label>Project</label>
+        <select name="project" id="project" required="required" ng-model="ticket._project" ng-options="value.name for (key, value) in projects">
+            <option value="">Select a project</option>
+        </select>
+
+        <label>Priority</label>
+        <select name="priority" id="priority" required="required" ng-model="ticket.priority">
+            <option value="low">low</option>
+            <option value="normal">normal</option>
+            <option value="high">high</option>
+        </select>
+
+        <label>Description</label>
+        <textarea name="description" id="description" required="required"
+            ng-model="ticket.description"></textarea>
+    </fieldset>
+    <button class="btn">Cancel</button>
+    <button class="btn btn-primary" type="submit">Save changes</button>
+</form>
