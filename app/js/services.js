@@ -65,7 +65,7 @@ angular.module('mongoService', ['ngResource'])
 
 angular.module('roService', ['ngResource'])
     .factory('Client', function($resource) {
-        var Client = $resource('/rest/clients/:clientId.json', {}, {
+        var Client = $resource('../rest/clients/:clientId.json', {}, {
             query: {method:'GET', params:{clientId:'clients'}, isArray:true}
         });
 
@@ -84,7 +84,7 @@ angular.module('roService', ['ngResource'])
     })
 
     .factory('Project', function($resource) {
-        var Project = $resource('/rest/projects/:projectId.json', {}, {
+        var Project = $resource('../rest/projects/:projectId.json', {}, {
             query: {method:'GET', params:{projectId:'projects'}, isArray:true}
         });
 
@@ -103,7 +103,7 @@ angular.module('roService', ['ngResource'])
     })
 
     .factory('Ticket', function($resource) {
-        var Ticket = $resource('/rest/tickets/:ticketId.json', {}, {
+        var Ticket = $resource('../rest/tickets/:ticketId.json', {}, {
             query: {method:'GET', params:{ticketId:'tickets'}, isArray:true}
         });
 
